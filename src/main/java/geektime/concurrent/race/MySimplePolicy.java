@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class SimplePolicy {
-	
+public class MySimplePolicy {
+
 	final int genThreadInPool = 8; //不超过8
-	final int computeThreadInPool = 8; //不超过16
+	final int computeThreadInPool = 16; //不超过16
 	SimpleShareData ssd;
-	
-	public SimplePolicy() {
+
+	public MySimplePolicy() {
 		ssd = new SimpleShareData();
 		ssd.initGenSignals(genThreadInPool);
 		ssd.initCompSignals(computeThreadInPool);

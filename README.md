@@ -22,3 +22,11 @@
 ### NIO
 1. Java NIO
 2. Netty
+
+
+```java
+mvn compile
+mvn exec:java -Dexec.mainClass="geektime.concurrent.race.ThreadRace"
+```
+
+./randomRace.sh

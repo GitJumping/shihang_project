@@ -53,10 +53,13 @@ public class ThreadRace {
 		tr.printTop();
 		long totalTime = System.currentTimeMillis() - startTime;
 		System.out.println("总时长: " + totalTime);
-		
-		SimplePolicy sp = new SimplePolicy();
+
+//		SimplePolicy sp = new SimplePolicy();
+//		long totalSimple = sp.go();
+
+		MySimplePolicy sp = new MySimplePolicy();
 		long totalSimple = sp.go();
-		
+
 		double rate = totalSimple / totalTime;
 		System.out.println("自定义A和基准比较: " + new Double(rate).toString());
 	}
