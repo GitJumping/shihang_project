@@ -24,11 +24,10 @@
 2. Netty
 
 # 第一次大作业
-修改点：
-- 值最小的修改<br/>
+值最小的修改<br/>
 [MySimpleDivideCompute](https://github.com/GitJumping/shihang_project/blob/main/src/main/java/geektime/concurrent/race/MySimpleDivideCompute.java)
 ``extracted2()方法``
-<br/>
+
 [MySimpleSyncGen](https://github.com/GitJumping/shihang_project/blob/main/src/main/java/geektime/concurrent/race/MySimpleSyncGen.java)
   ``gen()方法，但是效果不大``
 
@@ -39,6 +38,7 @@ mvn exec:java -Dexec.mainClass="geektime.concurrent.race.ThreadRace"
 ```
 <br/>
 直接运行脚本
+
 ```shell
 ./randomRace.sh
 ```
