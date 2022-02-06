@@ -1,5 +1,7 @@
 package geektime.concurrent.race;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
@@ -60,7 +62,8 @@ public class ThreadRace {
 		MySimplePolicy sp = new MySimplePolicy();
 		long totalSimple = sp.go();
 
-		double rate = totalSimple / totalTime;
+//		double rate = totalSimple / totalTime;
+		double rate = BigDecimal.valueOf(totalSimple).divide(BigDecimal.valueOf(totalTime), 4 , RoundingMode.HALF_UP).doubleValue();
 		System.out.println("自定义A和基准比较: " + new Double(rate).toString());
 	}
 	

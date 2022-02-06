@@ -6,8 +6,8 @@ import java.util.concurrent.Executors;
 
 public class MySimplePolicy {
 
-	final int genThreadInPool = 8; //不超过8
-	final int computeThreadInPool = 16; //不超过16
+	final int genThreadInPool = 2; //不超过8
+	final int computeThreadInPool = 8; //不超过16
 	SimpleShareData ssd;
 
 	public MySimplePolicy() {
@@ -27,8 +27,8 @@ public class MySimplePolicy {
 		
 
 		for (int tp = 0; tp < genThreadInPool; tp++) {
-		
-			SimpleSyncGen simpleSyncGen = new SimpleSyncGen(ssd, SimpleShareData.COUNT / genThreadInPool, tp);
+
+			MySimpleSyncGen simpleSyncGen = new MySimpleSyncGen(ssd, SimpleShareData.COUNT / genThreadInPool, tp);
 			genThreadPool.execute(simpleSyncGen);
 		}
 		
@@ -39,8 +39,8 @@ public class MySimplePolicy {
 		
 
 		for (int tp = 0; tp < computeThreadInPool; tp++) {
-		
-			SimpleDivideCompute simpleDiv = new SimpleDivideCompute(ssd, SimpleShareData.COUNT / computeThreadInPool, tp);
+
+			MySimpleDivideCompute simpleDiv = new MySimpleDivideCompute(ssd, SimpleShareData.COUNT / computeThreadInPool, tp);
 			computeThreadPool.execute(simpleDiv);
 		}
 		ssd.getCompSig().await();
