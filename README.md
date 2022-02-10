@@ -26,7 +26,9 @@
 # 第一次大作业
 值最小的修改<br/>
 [MySimpleDivideCompute](https://github.com/GitJumping/shihang_project/blob/main/src/main/java/geektime/concurrent/race/MySimpleDivideCompute.java)
-``extracted2()方法``
+- ``geektime.concurrent.race.MySimpleDivideCompute.extracted2()方法``，采用subList方式截取，可以获得最小的比值，`0.0x~0.1`
+- ``geektime.concurrent.race.MySimpleDivideCompute.extracted1()方法``，修改indexOf()为get()，并且每次拿取top10，可以获得次一点的比值，`0.1xs`
+- ``geektime.concurrent.race.MySimpleDivideCompute.extracted()方法``，原始的计算方法，`15+s`
 
 [MySimpleSyncGen](https://github.com/GitJumping/shihang_project/blob/main/src/main/java/geektime/concurrent/race/MySimpleSyncGen.java)
   ``gen()方法，但是效果不大``
