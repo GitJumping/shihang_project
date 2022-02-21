@@ -23,6 +23,7 @@
 1. Java NIO
 2. Netty
 
+
 # 第一次大作业
 值最小的修改<br/>
 [MySimpleDivideCompute](https://github.com/GitJumping/shihang_project/blob/main/src/main/java/geektime/concurrent/race/MySimpleDivideCompute.java)
@@ -44,3 +45,10 @@ mvn exec:java -Dexec.mainClass="geektime.concurrent.race.ThreadRace"
 ```shell
 ./randomRace.sh
 ```
+
+# 第二次大作业
+感兴趣的JEP特性<br/>
+[jep-conclude.md](https://github.com/GitJumping/shihang_project/blob/main/jep-conclude.md)
+
+
+
