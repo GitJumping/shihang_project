@@ -78,3 +78,17 @@ curl http://127.0.0.1:8080/weather/city/%E4%B8%8A%E6%B5%B7
 curl http://127.0.0.1:8080/weather/city-weather
 curl http://127.0.0.1:8080/weather/currentcity
 ```
+
+- 响应式编程，没有做完
+```shell
+curl http://127.0.0.1:8080/uniweather/city/%E4%B8%8A%E6%B5%B7
+curl http://127.0.0.1:8080/uniweather/city-weather
+curl http://127.0.0.1:8080/uniweather/currentcity
+```
+- 编译本地应用。graalvm需升级到21.3.0，按照日志提示命令运行`quarkus-weather-boot-starter-1.0-SNAPSHOT-runner`
+```shell
+export GRAALVM_HOME=graalvm-ce-java11-21.3.0
+./mvnw package -Dnative
+./mvnw verify -Pnative
+quarkus-weather-starter/quarkus-weather-boot-starter/target/quarkus-weather-boot-starter-1.0-SNAPSHOT-runner 
+```
