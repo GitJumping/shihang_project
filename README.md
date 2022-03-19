@@ -51,4 +51,30 @@ mvn exec:java -Dexec.mainClass="geektime.concurrent.race.ThreadRace"
 [jep-conclude.md](https://github.com/GitJumping/shihang_project/blob/main/jep-conclude.md)
 
 
+# 第三次大作业
+改写前面讲解的 Starter，获取天气数据，使用响应式编程接口
+[代码](https://github.com/GitJumping/shihang_project/tree/main)
 
+- 切换分支
+```shell
+git switch jdk17
+```
+
+- 编译与打包
+```shell
+cd quarkus-weather-starter
+mvn clean package
+```
+
+- 选择使用 Quarkus，开发模式运行
+```shell
+cd quarkus-weather-boot-starter
+mvn quarkus:dev
+```
+
+- 同步调用实现原有请求
+```shell
+curl http://127.0.0.1:8080/weather/city/%E4%B8%8A%E6%B5%B7
+curl http://127.0.0.1:8080/weather/city-weather
+curl http://127.0.0.1:8080/weather/currentcity
+```
