@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "geektime.starter.weather.name",
+      "type": "java.lang.String",
+      "defaultValue": "",
+      "description": "城市 ."
+    }
+  ]
+}
