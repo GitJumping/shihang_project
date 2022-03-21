@@ -79,7 +79,7 @@ curl http://127.0.0.1:8080/weather/city-weather
 curl http://127.0.0.1:8080/weather/currentcity
 ```
 
-- 响应式编程，没有做完
+- 响应式编程
 ```shell
 curl http://127.0.0.1:8080/uniweather/city/%E4%B8%8A%E6%B5%B7
 curl http://127.0.0.1:8080/uniweather/city-weather
