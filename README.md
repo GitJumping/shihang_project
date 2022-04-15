@@ -92,3 +92,34 @@ export GRAALVM_HOME=graalvm-ce-java11-21.3.0
 ./mvnw verify -Pnative
 quarkus-weather-starter/quarkus-weather-boot-starter/target/quarkus-weather-boot-starter-1.0-SNAPSHOT-runner 
 ```
+
+# 第四次大作业
+缓存API的使用
+[代码在jdk17的分支上](https://github.com/GitJumping/shihang_project/tree/jdk17/starter)
+```shell
+mvn clean package
+java -jar starter/weather-demo/target/weather-demo-0.1.jar
+```
+<br/>第一次执行耗时
+```json lines
+{
+  "深圳访问了20次": 1663,
+  "总访问了": 13233,
+  "上海访问了40次": 3319,
+  "广州访问了30次": 2439,
+  "成都访问了10次": 1037,
+  "北京访问了50次": 4773
+}
+```
+<br/>第一次执行耗时
+```json lines
+{
+  "深圳访问了20次": 1663,
+  "总访问了": 13233,
+  "上海访问了40次": 3319,
+  "广州访问了30次": 2439,
+  "成都访问了10次": 1037,
+  "北京访问了50次": 4773
+}
+```
+<br/>第一次执行耗时从缓存获取，很快返回
