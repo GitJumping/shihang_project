@@ -53,3 +53,5 @@ mvn exec:java -Dexec.mainClass="geektime.concurrent.race.ThreadRace"
 # 第三次大作业
 [第三次大作业](https://github.com/GitJumping/shihang_project/tree/jdk17#%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A)
 
+# 第四次大作业
+[第四次大作业（缓存API的使用）](https://github.com/GitJumping/shihang_project/tree/jdk17#%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A)
