@@ -100,7 +100,10 @@ quarkus-weather-starter/quarkus-weather-boot-starter/target/quarkus-weather-boot
 mvn clean package
 java -jar starter/weather-demo/target/weather-demo-0.1.jar
 ```
-<br/>第一次执行耗时
+<br/>第一次执行
+```shell
+curl http://localhost:8080/weather/all
+```
 ```json lines
 {
   "深圳访问了20次": 1663,
@@ -112,4 +115,4 @@ java -jar starter/weather-demo/target/weather-demo-0.1.jar
 }
 ```
 
-<br/>第二次执行耗时从缓存获取，很快返回
+<br/>第二次执行从缓存获取，会很快返回

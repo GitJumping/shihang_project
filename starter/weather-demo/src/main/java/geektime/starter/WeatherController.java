@@ -34,7 +34,7 @@ public class WeatherController {
 
 	@Cacheable(value = "spittleCache")
 	@RequestMapping(value = "/weather/all", produces = { "text/plain;charset=UTF-8" })
-	public String findByName() throws Exception {
+	public String weatherOfAllCity() throws Exception {
 		Long allBeginTime = System.currentTimeMillis();
 
 		String[] allCities = new String[]{"北京", "上海", "广州", "深圳", "成都"};
@@ -43,19 +43,20 @@ public class WeatherController {
 		JSONObject jsonObject = new JSONObject();
 
 		for(int l = 0; l<allCities.length; l++){
+			String weather = "";
 			Long beginTime = System.currentTimeMillis();
 			for(int i=0; i<accessTimes[l]; i++){
-				weatherService.getCityWeather(allCities[l]);
+				weather = weatherService.getCityWeather(allCities[l]);
 			}
 			Long endTime = System.currentTimeMillis();
 			Long triedTime = endTime - beginTime;
-			jsonObject.put(allCities[l]+"访问了"+ accessTimes[l] +"次", triedTime);
+			jsonObject.put(allCities[l]+"访问了"+ accessTimes[l] +"次， 耗时"+triedTime/1000+"秒， 返回数据=>", weather);
 		}
 
 		Long allEndTime = System.currentTimeMillis();
 		Long allTriedTime = allEndTime - allBeginTime;
-		jsonObject.put("总访问了", allTriedTime);
-		System.out.println("总访问了： "+allTriedTime);
+		jsonObject.put("总访问耗时秒", allTriedTime/1000);
+		System.out.println("总访问了： "+allTriedTime/1000);
 
 		return jsonObject.toString();
 	}
