@@ -57,4 +57,4 @@ mvn exec:java -Dexec.mainClass="geektime.concurrent.race.ThreadRace"
 [第四次大作业（缓存API的使用）](https://github.com/GitJumping/shihang_project/tree/jdk17#%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A)
 
 # 第五次作业
-[第五次作业](https://github.com/GitJumping/shihang_project#%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A)
+[第五次作业](https://github.com/GitJumping/shihang_project/tree/main/src/main/java/geektime/flash-sale-master)
