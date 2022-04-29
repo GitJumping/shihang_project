@@ -1,4 +1,4 @@
-## 如何启动并运行应用
+## 如何启动并运行应用(参考的前人的作品)
 
 * **docker-compose.yml**：【完整版】中间件部署脚本。相关中间件的安装脚本，可以通过执行`docker-compose -f docker-compose.yml up`命令安装所依赖的全部中间件；
 * **docker-compose-light.yml**：【轻量版】中间件部署脚本（**本地开发推荐**），移除了非必要的中间件服务。相关中间件的安装脚本，可以通过执行`docker-compose -f docker-compose-light.yml up`命令安装所依赖的全部中间件；
@@ -79,7 +79,7 @@ services:
     restart: on-failure
 ```
 
-## 五、 如何测试接口
+## 测试接口
 
 在项目的根目录下的`postman`目录，它是Postman的测试脚本，包含了接口定义和测试数据，直接选择某个接口点击测试。
 
