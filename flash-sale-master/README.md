@@ -1,7 +1,7 @@
 ## 如何启动并运行应用(参考的前人的作品)
 
 * **docker-compose.yml**：【完整版】中间件部署脚本。相关中间件的安装脚本，可以通过执行`docker-compose -f docker-compose.yml up`命令安装所依赖的全部中间件；
-* **docker-compose-light.yml**：【轻量版】中间件部署脚本（**本地开发推荐**），移除了非必要的中间件服务。相关中间件的安装脚本，可以通过执行`docker-compose -f docker-compose-light.yml up`命令安装所依赖的全部中间件；
+* **docker-compose-light.yml**：【轻量版】中间件部署脚本（**测试开发与验证，用这个**），移除了非必要的中间件服务。相关中间件的安装脚本，可以通过执行`docker-compose -f docker-compose-light.yml up`命令安装所依赖的全部中间件；
 
 ### 第一步：启动中间件
 
@@ -29,7 +29,7 @@
 ```
 
 
-有两份初始化脚本：`flash_sale_init.sql`和`nacos_init.yml`，前者是业务表初始化脚本，后者是Nacos的初始化脚本
+有两份初始化脚本：`flash_sale_init.sql`和`nacos_init.sql`，前者是业务表初始化脚本，后者是Nacos的初始化脚本
 
 ### 第二步：通过IDE启动应用运行
 
